@@ -1,0 +1,113 @@
+﻿<Window x:Class="CrudForExam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CrudForExam"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:control="clr-namespace:CrudForExam.UI.Controls"
+        mc:Ignorable="d" Loaded="Window_Loaded"
+        Title="MainWindow" Height="570" Width="750" ResizeMode="NoResize">
+    <Grid>
+        <Image Source="C:\Users\Elbek\source\repos\ToExam\CrudForExam\Resurces\BackgroundImage\image_2022-08-18_15-21-37.png" Width="1000"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="25*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#20365B"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="1.25*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="24*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" Width="295" Background="#495C83">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="12*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <TextBox Name="Search" Margin="5" Background="#242F3D" 
+                                        md:TextFieldAssist.TextFieldCornerRadius="4" md:HintAssist.Hint="Search" BorderThickness="0"
+                                        Foreground="Snow" Padding="5" md:TextFieldAssist.UnderlineBrush="Transparent" TextChanged="SearchBar_TextChanged"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Visible">
+                                        <ItemsControl Name="UserList">
+                                            
+                                        </ItemsControl>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Grid>
+                        <Border Background="#406882" Height="470" Width="370" CornerRadius="12" Opacity="0.40">
+                            
+                        </Border>
+
+                        <Border Width="370" Height="470">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="4*"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0">
+                                    <DockPanel>
+                                        <Button Height="50" Width="80" Margin="20 0 0 10" Background="#FAEEE7" BorderThickness="0" Click="Button_Click">
+                                            <md:PackIcon
+                                                        Width="30"
+                                                        Height="40"
+                                                        Kind="ContentSaveAllOutline"
+                                                        Foreground="#1C3879"/>
+                                        </Button>
+                                        <Button Height="50" Width="80" Margin="45 0 0 10" Background="#FAEEE7" BorderThickness="0" Click="AddPage">
+                                            <md:PackIcon
+                                                        Width="30"
+                                                        Height="40"
+                                                        Kind="AccountPlusOutline"
+                                                        Foreground="#1C3879"/>
+                                        </Button>
+                                        <Button Margin="20 0 0 10" Height="50" Width="80" Background="#FAEEE7" BorderThickness="0" Click="DeletePage">
+                                            <md:PackIcon
+                                                        Width="30"
+                                                        Height="40"
+                                                        Kind="Delete"
+                                                        Foreground="#1C3879"/>
+                                        </Button>
+
+                                    </DockPanel>
+                                </Grid>
+
+                                <Grid Grid.Row="1" Margin="0 0 0 8">
+                                    <Border Margin="15"
+                                        CornerRadius="15"
+                                        Opacity="1"
+                                        Background="#4B4E72">
+                                        <Frame Grid.Row="0" Name="FrameName" Opacity="1" NavigationUIVisibility="Hidden" Padding="5"/>
+                                    </Border>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    
+                   
+                </Grid>
+            </Grid>
+
+
+        </Grid>
+    </Grid>
+</Window>

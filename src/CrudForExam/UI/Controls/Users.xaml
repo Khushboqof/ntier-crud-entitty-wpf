@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="CrudForExam.UI.Controls.Users"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CrudForExam.UI.Controls"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             Height="60" Width="300">
+    <Grid Background="#17212B">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid Grid.Column="0">
+                <Ellipse Margin="8 10 10 10">
+                    <Ellipse.Fill>
+                        <ImageBrush x:Name="UserImage" />
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Grid>
+        
+        </Grid>
+        <Grid Grid.Column="1">
+            <TextBlock x:Name="NameTxt" Text="Usmonov Javohir" Foreground="Snow" FontWeight="DemiBold"
+                               FontSize="15" Margin="0 20 0 5"/>
+        </Grid>
+
+       
+    </Grid>
+</UserControl>
